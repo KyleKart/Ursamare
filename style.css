@@ -26,11 +26,77 @@ th, td {
   text-align: left;
 }
 
-th {
+th {.sidebar {
+  position: sticky;
+  top: 20px;
+  max-width: 250px;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: #F0F0F0;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 0 0 10px;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #EEE;
+}
   background-color: #D8C387;
   font-size: 16px;
 }
+.sidebar {
+  position: sticky;
+  top: 20px;
+  max-width: 250px;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: #F0F0F0;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
 
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 0 0 10px;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #EEE;
+}
 a {
   text-decoration: none;
   color: #000;
