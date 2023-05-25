@@ -5,23 +5,6 @@
     <title>Ursamare</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script>var toc = document.querySelector('table tbody');
-
-// Find all heading elements and create a table row for each one
-var headers = document.querySelectorAll('h2, h3, h4, h5, h6');
-for (var i = 0; i < headers.length; i++) {
-  var header = headers[i];
-  var link = document.createElement('a');
-  link.textContent = header.textContent;
-  link.setAttribute('href', '#' + header.getAttribute('id'));
-  
-  var row = document.createElement('tr');
-  var cell = document.createElement('td');
-  cell.appendChild(link);
-  row.appendChild(cell);
-  
-  toc.appendChild(row);
-}</script>
 <body>
     <h1 id="ursamares">Ursamares</h1>
 <table>
@@ -31,15 +14,6 @@ for (var i = 0; i < headers.length; i++) {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="#section-1">Section 1</a></td>
-    </tr>
-    <tr>
-      <td><a href="#section-2">Section 2</a></td>
-    </tr>
-    <tr>
-      <td><a href="#section-3">Section 3</a></td>
-    </tr>
   </tbody>
 </table>
 
@@ -58,6 +32,26 @@ These adaptations allow them to thrive and enjoy the beauty and resources of aqu
 <br>
 <h3 id="ursamare-eating">Ursamare Eating</h3>
 <p>Ursamare eat a lot of fish like Cod and Salmon. It&#39;s an easy food for Ursamare to find as the fish swim right outside their door. Ursamare tend to not like the taste of tropical fish and thus avoid them.</p>
+<script>
+    console.log('Creating table of contents...');
+var toc = document.querySelector('table tbody');
 
+    // Find all heading elements and create a table row for each one
+    var headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+    for (var i = 0; i < headers.length; i++) {
+      var header = headers[i];
+      var link = document.createElement('a');
+      link.textContent = header.textContent;
+      link.setAttribute('href', '#' + header.getAttribute('id'));
+      
+      var row = document.createElement('tr');
+      var cell = document.createElement('td');
+      cell.appendChild(link);
+      row.appendChild(cell);
+      
+      toc.appendChild(row);
+    }
+    console.log(headers);
+    </script>
 </body>
 </html>
