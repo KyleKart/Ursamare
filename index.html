@@ -1,87 +1,57 @@
-<style>body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-p {
-  margin-bottom: 1.5em;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-table {
-  border-collapse: collapse;
-  margin: 10px 0;
-}
-
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-  font-size: 16px;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-a:hover {
-  text-decoration: underline;
-}</style>
-<h1 id="ursamares">Ursamares</h1>
-<nav>
-  <ul>
-    <li><a href="page1.html">Page 1</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-    <li><a href="page3.html">Page 3</a></li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Ursamare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="ursamares">Ursamares</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Table of Contents</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 
 <h3 id="what-is-ursamare">What is Ursamare?</h3>
 <p>Ursamare (BearSea) is a bear-like species.</p>
+<br>
 <h3 id="ursamare-behavior-and-social-habits">Ursamare behavior and social habits</h3>
 <p>Ursamares are quite friendly creatures. They use hugging as a way to greet people.</p>
+<br>
 <h3 id="habitat-and-living">Habitat and living</h3>
 <p>Ursamares make their homes around bodies of water. While they cannot survive underwater, Ursamares have developed the ability to build watertight structures and sealed houses, using materials such as ice and glass.</p>
+<br>
 <h3 id="survival-adaptations">Survival Adaptations</h3>
 <p>Ursamares are able to survive in colder environments, thanks to their thick insulating layer of fur and blubber, as well as their ability to regulate their body temperature.
 These adaptations allow them to thrive and enjoy the beauty and resources of aquatic environments, creating a unique and fascinating lifestyle, unlike other species.</p>
+<br>
 <h3 id="ursamare-eating">Ursamare Eating</h3>
 <p>Ursamare eat a lot of fish like Cod and Salmon. It&#39;s an easy food for Ursamare to find as the fish swim right outside their door. Ursamare tend to not like the taste of tropical fish and thus avoid them.</p>
+<script>
+    console.log('Creating table of contents...');
+var toc = document.querySelector('table tbody');
 
+    // Find all heading elements and create a table row for each one
+    var headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+    for (var i = 0; i < headers.length; i++) {
+      var header = headers[i];
+      var link = document.createElement('a');
+      link.textContent = header.textContent;
+      link.setAttribute('href', '#' + header.getAttribute('id'));
+      
+      var row = document.createElement('tr');
+      var cell = document.createElement('td');
+      cell.appendChild(link);
+      row.appendChild(cell);
+      
+      toc.appendChild(row);
+    }
+    console.log(headers);
+    </script>
+</body>
+</html>
