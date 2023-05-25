@@ -5,6 +5,23 @@
     <title>Ursamare</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>var toc = document.querySelector('table tbody');
+
+// Find all heading elements and create a table row for each one
+var headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+for (var i = 0; i < headers.length; i++) {
+  var header = headers[i];
+  var link = document.createElement('a');
+  link.textContent = header.textContent;
+  link.setAttribute('href', '#' + header.getAttribute('id'));
+  
+  var row = document.createElement('tr');
+  var cell = document.createElement('td');
+  cell.appendChild(link);
+  row.appendChild(cell);
+  
+  toc.appendChild(row);
+}</script>
 <body>
     <h1 id="ursamares">Ursamares</h1>
 <table>
