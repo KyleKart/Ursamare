@@ -7,51 +7,59 @@
 </head>
 <body>
     <h1 id="ursamares">Ursamares</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Table of Contents</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th>Table of Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 
-<h3 id="what-is-ursamare">What is Ursamare?</h3>
-<p>Ursamare (BearSea) is a bear-like species.</p>
-<br>
-<h3 id="ursamare-behavior-and-social-habits">Ursamare behavior and social habits</h3>
-<p>Ursamares are quite friendly creatures. They use hugging as a way to greet people.</p>
-<br>
-<h3 id="habitat-and-living">Habitat and living</h3>
-<p>Ursamares make their homes around bodies of water on a planet named Frigursi. While they cannot survive underwater, Ursamares have developed the ability to build watertight structures and sealed houses, using materials such as ice and glass.</p>
-<br>
-<h3 id="survival-adaptations">Survival Adaptations</h3>
-<p>Ursamares are able to survive in colder environments, thanks to their thick insulating layer of fur and blubber, as well as their ability to regulate their body temperature.
-These adaptations allow them to thrive and enjoy the beauty and resources of aquatic environments, creating a unique and fascinating lifestyle, unlike other species.</p>
-<br>
-<h3 id="ursamare-eating">Ursamare Eating</h3>
-<p>Ursamare eat a lot of fish like Cod and Salmon. It&#39;s an easy food for Ursamare to find as the fish swim right outside their door. Ursamare tend to not like the taste of tropical fish and thus avoid them.</p>
-<script>
-    console.log('Creating table of contents...');
-var toc = document.querySelector('table tbody');
+    <h3 id="what-is-ursamare">What is Ursamare?</h3>
+    <p>Ursamare (BearSea) is a bear-like species.</p>
+    <br>
+    <h3 id="ursamare-behavior-and-social-habits">Ursamare behavior and social habits</h3>
+    <p>Ursamares are quite friendly creatures. They use hugging as a way to greet people.</p>
+    <br>
+    <h3 id="habitat-and-living">Habitat and living</h3>
+    <p>Ursamares make their homes around bodies of water on a planet named Frigursi. While they cannot survive underwater, Ursamares have developed the ability to build watertight structures and sealed houses, using materials such as ice and glass.</p>
+    <br>
+    <h3 id="survival-adaptations">Survival Adaptations</h3>
+    <p>Ursamares are able to survive in colder environments, thanks to their thick insulating layer of fur and blubber, as well as their ability to regulate their body temperature.
+    These adaptations allow them to thrive and enjoy the beauty and resources of aquatic environments, creating a unique and fascinating lifestyle, unlike other species.</p>
+    <br>
+    <h3 id="ursamare-eating">Ursamare Eating</h3>
+    <p>Ursamares eat a lot of fish like cod and salmon. It's an easy food for Ursamares to find as the fish swim right outside their door. Ursamares tend to not like the taste of tropical fish and thus avoid them.</p>
+    <p>"Grilled salmon" refers to a grilled sandwich that has salmon and cheese in it. It's an Ursamare staple. It's like saying "grilled cheese".</p>
+    <br>
+    <h3 id="reproduction-and-family">Reproduction and Family</h3>
+    <p>Ursamares on Frigursi, being hermaphroditic, can take on either role. They mate in their icy homes, embracing upright as they intertwine their lower bodies for cloacal sperm transfer, always maintaining a warm and affectionate hug. After mating, they nest within their homes to gestate and birth their young, while both parents lovingly care for their offspring together with tender affection. This unique bonding and parenting approach strengthens Ursamares' familial ties in their icy world.</p>
+    <br>
+    <h3 id="ursamare-sports">Ursamare Sports</h3>
+    <p>BearBall is the main big sport played by Ursamares. It is a competitive sport utilizing their strong muscles and agility to "throw and catch" a ball made of rolled up fish scales. In BearBall, Ursamares cannot use their hands or feet to pass the ball to their teammates. Instead, they use their heads, tails, or bounce the ball off their bodies to move it around. They must stay within the designated playing area, which is usually marked by trees or rocks. Teams can be formed, and there are various rules like the ones stated above, but the main goal is to have fun and stay active!</p>
 
-    // Find all heading elements and create a table row for each one
-    var headers = document.querySelectorAll('h2, h3, h4, h5, h6');
-    for (var i = 0; i < headers.length; i++) {
-      var header = headers[i];
-      var link = document.createElement('a');
-      link.textContent = header.textContent;
-      link.setAttribute('href', '#' + header.getAttribute('id'));
-      
-      var row = document.createElement('tr');
-      var cell = document.createElement('td');
-      cell.appendChild(link);
-      row.appendChild(cell);
-      
-      toc.appendChild(row);
-    }
-    console.log(headers);
+    <script>
+        console.log('Creating table of contents...');
+        var toc = document.querySelector('table tbody');
+
+        // Find all heading elements and create a table row for each one
+        var headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+        for (var i = 0; i < headers.length; i++) {
+            var header = headers[i];
+            var link = document.createElement('a');
+            link.textContent = header.textContent;
+            link.setAttribute('href', '#' + header.getAttribute('id'));
+            
+            var row = document.createElement('tr');
+            var cell = document.createElement('td');
+            cell.appendChild(link);
+            row.appendChild(cell);
+            
+            toc.appendChild(row);
+        }
+        console.log(headers);
     </script>
 </body>
 </html>
